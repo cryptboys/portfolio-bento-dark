@@ -46,10 +46,21 @@ export default function SkillsCard() {
               <ul className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <li
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-zinc-300"
+                    key={item.name}
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/[0.08] transition-colors"
                   >
-                    {item}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      item.name
+                    )}
                   </li>
                 ))}
               </ul>

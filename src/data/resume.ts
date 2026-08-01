@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
     points: [
       "Delivered 12+ client projects: LLM-powered automation (FastAPI + LangChain), voice AI pipelines (TTS + Whisper), DeFi analytics dashboards (React + Python).",
       "Maintained 5.0/5.0 rating across 15+ contracts; 100% on-time delivery.",
-      "Designed autonomous agent architectures using Hermes/Meridian for on-chain DeFi operations.",
+      "Designed autonomous agent architectures using Hermes for on-chain DeFi operations.",
     ],
   },
   {
@@ -87,8 +87,8 @@ export const projects: Project[] = [
   {
     title: "Autonomous DeFi Liquidity Agent",
     blurb:
-      "Self-running agent analyzing DLMM liquidity positions on Solana, executing data-driven rebalancing. Hermes/Meridian orchestration, on-chain execution.",
-    stack: ["Python", "Hermes", "Meridian", "Solana", "DLMM", "Docker"],
+      "Self-running agent analyzing DLMM liquidity positions on Solana, executing data-driven rebalancing. Hermes orchestration, on-chain execution.",
+    stack: ["Python", "Hermes", "Solana", "DLMM", "Docker"],
     accent: "cyan",
     links: [{ label: "GitHub", href: "https://github.com/cryptboys/defi-liquidity-agent" }],
   },
@@ -113,10 +113,15 @@ export const projects: Project[] = [
   },
 ];
 
+export type SkillItem = {
+  name: string;
+  link?: string;
+};
+
 export type SkillGroup = {
   label: string;
   icon: "code" | "brain" | "mic" | "chain" | "server" | "data";
-  items: string[];
+  items: SkillItem[];
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -124,54 +129,69 @@ export const skillGroups: SkillGroup[] = [
     label: "Engineering",
     icon: "code",
     items: [
-      "Python",
-      "TypeScript",
-      "Next.js",
-      "FastAPI",
-      "Docker",
-      "Git/GitHub",
-      "CI/CD (GitHub Actions)",
-      "PostgreSQL",
-      "Redis",
+      { name: "Python", link: "https://github.com/python" },
+      { name: "TypeScript", link: "https://github.com/microsoft/TypeScript" },
+      { name: "Next.js", link: "https://github.com/vercel/next.js" },
+      { name: "FastAPI", link: "https://github.com/fastapi/fastapi" },
+      { name: "Docker", link: "https://github.com/docker" },
+      { name: "Git/GitHub", link: "https://github.com/git" },
+      { name: "CI/CD (GitHub Actions)", link: "https://github.com/features/actions" },
+      { name: "PostgreSQL", link: "https://github.com/postgres/postgres" },
+      { name: "Redis", link: "https://github.com/redis/redis" },
     ],
   },
   {
     label: "AI & LLM",
     icon: "brain",
     items: [
-      "LLM Evaluation (RLHF)",
-      "Prompt Engineering",
-      "RAG Pipelines (LangChain, LlamaIndex)",
-      "Vector Databases (Weaviate, Pinecone)",
-      "Autonomous Agents (Hermes, Meridian, CrewAI)",
-      "Model Fine-tuning (LoRA/QLoRA)",
-      "Model Serving (vLLM, TGI)",
+      { name: "LLM Evaluation (RLHF)", link: "https://github.com/huggingface/trl" },
+      { name: "Prompt Engineering" },
+      { name: "RAG Pipelines (LangChain, LlamaIndex)", link: "https://github.com/langchain-ai/langchain" },
+      { name: "Vector Databases (Weaviate, Pinecone)", link: "https://github.com/weaviate/weaviate" },
+      { name: "Autonomous Agents (Hermes, CrewAI)", link: "https://github.com/nousresearch/hermes-agent" },
+      { name: "Model Fine-tuning (LoRA/QLoRA)", link: "https://github.com/huggingface/peft" },
+      { name: "Model Serving (vLLM, TGI)", link: "https://github.com/vllm-project/vllm" },
     ],
   },
   {
     label: "Voice & Audio",
     icon: "mic",
     items: [
-      "Multilingual Voice Actor (EN / ID / JV)",
-      "AI Voice Data Generation",
-      "TTS Pipeline (Coqui, ElevenLabs, OpenAI)",
-      "ASR (Whisper, Faster-Whisper)",
-      "Real-time Voice Streaming",
+      { name: "Multilingual Voice Actor (EN / ID / JV)" },
+      { name: "AI Voice Data Generation" },
+      { name: "TTS Pipeline (Coqui, ElevenLabs, OpenAI)", link: "https://github.com/coqui-ai/TTS" },
+      { name: "ASR (Whisper, Faster-Whisper)", link: "https://github.com/openai/whisper" },
+      { name: "Real-time Voice Streaming" },
     ],
   },
   {
     label: "Web3 & Data",
     icon: "chain",
-    items: ["DeFi Protocols", "Solana Development", "Smart Contracts (Rust)", "On-chain Analytics"],
+    items: [
+      { name: "DeFi Protocols", link: "https://github.com/solana-labs/solana" },
+      { name: "Solana Development", link: "https://github.com/solana-developers" },
+      { name: "Smart Contracts (Rust)" },
+      { name: "On-chain Analytics" },
+    ],
   },
   {
     label: "MLOps & Infra",
     icon: "server",
-    items: ["Kubernetes (basics)", "Monitoring (Prometheus/Grafana)", "CI/CD Pipelines", "Cloud (Vercel, Railway, AWS)"],
+    items: [
+      { name: "Kubernetes (basics)", link: "https://github.com/kubernetes/kubernetes" },
+      { name: "Monitoring (Prometheus/Grafana)", link: "https://github.com/prometheus/prometheus" },
+      { name: "CI/CD Pipelines" },
+      { name: "Cloud (Vercel, Railway, AWS)" },
+    ],
   },
   {
     label: "Data Science",
     icon: "data",
-    items: ["EDA & Feature Engineering", "XGBoost / LightGBM", "Experiment Tracking (MLflow/W&B)", "Kaggle Competitions"],
+    items: [
+      { name: "EDA & Feature Engineering" },
+      { name: "XGBoost / LightGBM", link: "https://github.com/dmlc/xgboost" },
+      { name: "Experiment Tracking (MLflow/W&B)", link: "https://github.com/mlflow/mlflow" },
+      { name: "Kaggle Competitions", link: "https://www.kaggle.com" },
+    ],
   },
 ];
