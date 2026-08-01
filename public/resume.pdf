@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 2692 >>
+stream
+BT /F1 24 Tf 56 728 Td (Herman Donawan) Tj ET
+BT /F2 13 Tf 56 694 Td (AI Developer & Programmer) Tj ET
+BT /F2 10 Tf 56 677 Td (Boyolali, Central Java, Indonesia  |  kangmaswawan21@gmail.com) Tj ET
+BT /F2 10 Tf 56 663 Td (github.com/cryptboys  |  linkedin.com/in/herman-donawan-731554) Tj ET
+BT /F1 12 Tf 0.55 0.35 0.96 rg 56 631 Td (SUMMARY) Tj 0 0 0 rg ET
+BT /F2 10 Tf 56 611 Td (AI Developer specializing in LLM Evaluation \(RLHF\), Autonomous Agents, AI Voice Data,) Tj ET
+BT /F2 10 Tf 56 597 Td (Prompt Engineering, and Web3/DeFi. Building intelligent agents, voice-driven experiences,) Tj ET
+BT /F2 10 Tf 56 583 Td (and the infrastructure that trains the models behind them.) Tj ET
+BT /F1 12 Tf 0.55 0.35 0.96 rg 56 559 Td (EXPERIENCE) Tj 0 0 0 rg ET
+BT /F1 11 Tf 56 539 Td (Freelance AI Contributor - Outlier \(2023 - Present\)) Tj ET
+BT /F2 10 Tf 56 522 Td (- Evaluate and train LLMs through RLHF across multilingual datasets.) Tj ET
+BT /F2 10 Tf 56 508 Td (- Design and refine prompts for instruction-following and reasoning tasks.) Tj ET
+BT /F2 10 Tf 56 494 Td (- Build and curate multilingual audio datasets for voice AI training.) Tj ET
+BT /F1 11 Tf 56 476 Td (Freelance Python & AI Developer - Upwork \(2023 - Present\)) Tj ET
+BT /F2 10 Tf 56 459 Td (- Ship Python scripts and automation tooling for client workflows.) Tj ET
+BT /F2 10 Tf 56 445 Td (- Develop autonomous AI agents with LLM API integration.) Tj ET
+BT /F1 11 Tf 56 427 Td (Community Ambassador - Base Ecosystem \(2023 - Present\)) Tj ET
+BT /F2 10 Tf 56 410 Td (- Drive Web3 education, DeFi awareness, and community engagement.) Tj ET
+BT /F1 12 Tf 0.55 0.35 0.96 rg 56 386 Td (PROJECTS) Tj 0 0 0 rg ET
+BT /F1 11 Tf 56 366 Td (Interactive AI Avatar / Radio DJ System) Tj ET
+BT /F2 10 Tf 56 349 Td (Python, TikTokLive, TTS, LLM - Real-time streaming app with live comment responses.) Tj ET
+BT /F1 11 Tf 56 335 Td (Autonomous DeFi Liquidity Agent) Tj ET
+BT /F2 10 Tf 56 318 Td (Python, Hermes, Meridian, Solana - DLMM liquidity analysis and on-chain decisions.) Tj ET
+BT /F1 11 Tf 56 304 Td (Data Science & EDA) Tj ET
+BT /F2 10 Tf 56 287 Td (Kaggle, Jupyter, pandas - Notebooks cleaning and analyzing datasets.) Tj ET
+BT /F1 12 Tf 0.55 0.35 0.96 rg 56 263 Td (SKILLS) Tj 0 0 0 rg ET
+BT /F2 10 Tf 56 243 Td (Engineering: Python, JSON, Markdown, Git/GitHub, API Integration, Jupyter) Tj ET
+BT /F2 10 Tf 56 229 Td (AI/LLM: LLM Evaluation \(RLHF\), Prompt Engineering, Autonomous Agents \(Hermes, Meridian\), CrewAI, Model Fine-tuning) Tj ET
+BT /F2 10 Tf 56 215 Td (Voice: Multilingual Voice Actor \(EN/ID/JV\), AI Voice Data Generation, TTS Pipeline) Tj ET
+BT /F2 10 Tf 56 201 Td (Data/Web3: Data Science, DeFi, Web3) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000353 00000 n 
+0000000450 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3194
+%%EOF
