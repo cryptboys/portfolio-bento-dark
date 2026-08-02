@@ -107,7 +107,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "FastAPI", "LangChain", "Weaviate", "PostgreSQL", "Stripe", "Docker"],
     accent: "emerald",
     links: [
-      { label: "Live Demo", href: "https://rag-saas.vercel.app" },
+      { label: "Live Demo", href: "https://herman-rag-saas.vercel.app" },
       { label: "GitHub", href: "https://github.com/cryptboys/rag-saas" },
     ],
   },
