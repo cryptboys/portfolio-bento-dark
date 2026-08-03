@@ -111,6 +111,17 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/cryptboys/rag-saas" },
     ],
   },
+  {
+    title: "Voice Data Exploration: Gujarati Digits",
+    blurb:
+      "Exploratory Data Analysis (EDA) on audio data, extracting key metrics like duration, sample rate, RMS energy, Signal-to-Noise Ratio (SNR), and Voice Activity Detection (VAD). Visualizes audio characteristics and quality.",
+    stack: ["Python", "Librosa", "Pandas", "Matplotlib", "Seaborn", "Kaggle Notebooks"],
+    accent: "cyan",
+    links: [
+      { label: "Kaggle Notebook", href: "https://www.kaggle.com/code/kangmaswawan/voice-data-exploration-gujarati-spoken-digits" },
+      { label: "GitHub Repo", href: "https://github.com/cryptboys/voice-data-project" },
+    ],
+  },
 ];
 
 export type SkillItem = {
