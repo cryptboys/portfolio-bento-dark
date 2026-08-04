@@ -8,22 +8,22 @@ const capabilities = [
   {
     icon: Bot,
     label: "Autonomous Agents",
-    desc: "Self-improving agents dengan persistent memory lintas sesi. Belajar dari pengalaman lewat skill, bisa didelegasi kerja paralel ke sub-agent.",
+    desc: "Self-improving agents with persistent memory across sessions. Learns from experience via skills; can delegate parallel work to sub-agents.",
   },
   {
     icon: Zap,
     label: "Multi-Platform",
-    desc: "Satu agent jalan di Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI, sampai webhooks. Full tool access, bukan cuma chat.",
+    desc: "One agent runs on Telegram, Discord, Slack, WhatsApp, Signal, Email, CLI, and webhooks — full tool access, not just chat.",
   },
   {
     icon: Brain,
     label: "Skill System",
-    desc: "Prosedur reusable disimpan sebagai skill markdown. Skill kustom saya: riset YouTube → NotebookLM → Obsidian, job hunter, RAG SaaS, voice AI, DeFi agent.",
+    desc: "Reusable procedures saved as markdown skills. My custom skills: YouTube research → NotebookLM → Obsidian sync, job hunter, RAG SaaS, voice AI, DeFi agent.",
   },
   {
     icon: Terminal,
     label: "System Access",
-    desc: "Akses penuh ke terminal, browser automation, file ops, code execution, vision, TTS, dan image/video generation.",
+    desc: "Full access to terminal, browser automation, file ops, code execution, vision, TTS, and image/video generation.",
   },
 ];
 
@@ -52,11 +52,11 @@ export default function HermesCard({ className = "", delay = 0 }: { className?: 
           </div>
 
           <p className="text-sm text-zinc-400 mb-4 flex-1">
-            Portfolio ini dirancang dan dibangun menggunakan Hermes Agent — AI agent framework open-source.{" "}
-            <a href="/hermes" className="text-violet-300 hover:underline font-mono text-xs">
-              Detail →
-            </a>
-          </p>
+                  This portfolio was designed, coded, and deployed using Hermes Agent — an open-source AI agent framework.{" "}
+                  <a href="/hermes" className="text-violet-300 hover:underline font-mono text-xs">
+                    Details →
+                  </a>
+                </p>
 
           <div className="flex flex-col gap-2">
             {capabilities.map((cap) => {

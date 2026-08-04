@@ -32,8 +32,9 @@ export default function HermesPage() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Hermes Agent</h1>
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-            Portfolio ini — desain, kode, deployment — dibangun dengan Hermes Agent,
-            AI agent framework open-source dari Nous Research.
+            This portfolio — design, code, deployment — was built with{" "}
+            <span className="font-medium text-violet-300">Hermes Agent</span>, an open-source AI agent framework by Nous Research.
+            Hermes runs in your terminal, messaging platforms, and IDE — not just chat, but full tool access.
           </p>
         </div>
 
@@ -51,8 +52,8 @@ export default function HermesPage() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-white mb-6">Skills & Automations</h2>
-          <p className="text-zinc-400 mb-6">Skill kustom untuk otomatisasi sehari-hari:</p>
+          <h2 className="text-2xl font-semibold text-white mb-6">Custom Skills & Automations</h2>
+          <p className="text-zinc-400 mb-6">Custom skills I built on top of Hermes to automate day-to-day workflows:</p>
           <div className="grid gap-3 sm:grid-cols-2">
             {customSkills.map((skill, i) => (
               <div key={i} className="card p-4 flex items-start gap-3">
@@ -64,7 +65,8 @@ export default function HermesPage() {
         </section>
 
         <div className="border-t border-white/10 pt-8 text-center text-sm text-zinc-500">
-          <p>Built with <span className="text-violet-300">Hermes Agent</span> — Nous Research.</p>
+          <p>Built with <span className="text-violet-300">Hermes Agent</span> — AI agent framework by Nous Research.</p>
+          <p className="mt-2">Source code: <a href="https://github.com/cryptboys/portfolio-bento-dark" className="hover:text-white underline">GitHub</a></p>
         </div>
       </div>
     </div>
