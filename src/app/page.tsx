@@ -8,6 +8,7 @@ import ExperienceCard from "@/components/ExperienceCard";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import SkillsCard from "@/components/SkillsCard";
 import ActivityCard from "@/components/ActivityCard";
+import HermesCard from "@/components/HermesCard";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -25,15 +26,18 @@ export default function Home() {
             <ProfileCard />
           </BentoCard>
 
-          {/* Row 2: About + Skills + Activity */}
-          <BentoCard delay={0.1} className="lg:col-span-4">
+          {/* Row 2: About + Skills + Activity + Hermes */}
+          <BentoCard delay={0.1} className="lg:col-span-3">
             <AboutCard />
           </BentoCard>
-          <BentoCard delay={0.15} className="lg:col-span-4">
+          <BentoCard delay={0.15} className="lg:col-span-3">
             <SkillsCard />
           </BentoCard>
-          <BentoCard delay={0.2} className="lg:col-span-4">
+          <BentoCard delay={0.2} className="lg:col-span-3">
             <ActivityCard />
+          </BentoCard>
+          <BentoCard delay={0.25} className="lg:col-span-3">
+            <HermesCard delay={0.25} />
           </BentoCard>
 
           {/* Row 3: Experience */}

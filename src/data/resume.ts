@@ -160,6 +160,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "RAG Pipelines (LangChain, LlamaIndex)", link: "https://github.com/langchain-ai/langchain" },
       { name: "Vector Databases (Weaviate, Pinecone)", link: "https://github.com/weaviate/weaviate" },
       { name: "Autonomous Agents (Hermes, CrewAI)", link: "https://github.com/nousresearch/hermes-agent" },
+      { name: "Hermes Agent Framework (Built This Portfolio)", link: "https://hermes-agent.nousresearch.com/" },
       { name: "Model Fine-tuning (LoRA/QLoRA)", link: "https://github.com/huggingface/peft" },
       { name: "Model Serving (vLLM, TGI)", link: "https://github.com/vllm-project/vllm" },
     ],
