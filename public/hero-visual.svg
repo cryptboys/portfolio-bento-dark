@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" fill="none" role="img" aria-label="Abstract neural network visualization">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#8B5CF6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="stream2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="700" height="600" fill="#08080A"/>
+  <g opacity="0.15" stroke="#ffffff" stroke-opacity="0.5">
+    <path d="M0 100h700M0 200h700M0 300h700M0 400h700M0 500h700"/>
+    <path d="M100 0v600M200 0v600M300 0v600M400 0v600M500 0v600M600 0v600"/>
+  </g>
+  <ellipse cx="350" cy="270" rx="340" ry="260" fill="url(#core)"/>
+  <circle cx="120" cy="140" r="90" fill="#22D3EE" opacity="0.07" filter="url(#glow)"/>
+  <circle cx="580" cy="420" r="110" fill="#34D399" opacity="0.06" filter="url(#glow)"/>
+
+  <!-- data streams -->
+  <g filter="url(#glow)" opacity="0.85">
+    <path d="M350 270 C 420 180, 520 160, 610 150" stroke="url(#stream1)" stroke-width="2.5"/>
+    <path d="M350 270 C 300 380, 200 420, 110 470" stroke="url(#stream2)" stroke-width="2"/>
+    <path d="M350 270 C 430 330, 480 460, 540 520" stroke="url(#stream1)" stroke-width="2"/>
+    <path d="M350 270 C 250 220, 160 230, 80 260" stroke="url(#stream2)" stroke-width="1.8"/>
+    <path d="M350 270 C 380 380, 400 490, 420 560" stroke="#22D3EE" stroke-width="1.6"/>
+    <path d="M350 270 C 290 160, 220 120, 150 90" stroke="#8B5CF6" stroke-width="1.6"/>
+  </g>
+
+  <!-- particles on streams -->
+  <g fill="#FFFFFF">
+    <circle cx="430" cy="212" r="4" fill="#22D3EE"/>
+    <circle cx="520" cy="182" r="3" fill="#8B5CF6"/>
+    <circle cx="300" cy="340" r="3.5" fill="#34D399"/>
+    <circle cx="220" cy="400" r="2.5" fill="#FFFFFF"/>
+    <circle cx="470" cy="360" r="3" fill="#22D3EE"/>
+    <circle cx="540" cy="470" r="2.5" fill="#34D399"/>
+  </g>
+
+  <!-- central node -->
+  <g filter="url(#glow)">
+    <circle cx="350" cy="270" r="58" stroke="#8B5CF6" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="350" cy="270" r="38" stroke="#22D3EE" stroke-width="1" opacity="0.6"/>
+    <circle cx="350" cy="270" r="20" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="350" cy="270" r="10" fill="#8B5CF6"/>
+  </g>
+
+  <!-- floating domain icons (simple geometric marks) -->
+  <g stroke="#22D3EE" stroke-width="2" opacity="0.9" filter="url(#glow)">
+    <path d="M92 132l14 14-14 14M110 132h18" transform="translate(-10,-30)" fill="none"/>
+  </g>
+  <g stroke="#34D399" stroke-width="2" opacity="0.9" fill="none" filter="url(#glow)">
+    <path d="M100 510c14-10 28-10 42 0s28 10 42 0M100 530c14-10 28-10 42 0s28 10 42 0" transform="translate(10,-18)"/>
+  </g>
+  <g stroke="#8B5CF6" stroke-width="2.5" opacity="0.9" fill="none" filter="url(#glow)">
+    <path d="M560 96c-6 6-6 16 0 22M548 96c-6 6-6 16 0 22M572 96c-6 6-6 16 0 22" transform="translate(4,22)"/>
+  </g>
+  <g stroke="#F59E0B" stroke-width="2" opacity="0.85" fill="none" filter="url(#glow)">
+    <path d="M70 250l10 10 18-20" transform="translate(12,18)"/>
+  </g>
+</svg>

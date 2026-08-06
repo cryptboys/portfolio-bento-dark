@@ -1,6 +1,6 @@
 export const profile = {
   name: "Herman Donawan",
-  role: "AI Engineer",
+  role: "AI Developer & Programmer",
   location: "Boyolali, Central Java, Indonesia",
   email: "kangmaswawan21@gmail.com",
   github: "https://github.com/cryptboys",
@@ -8,7 +8,9 @@ export const profile = {
   summary:
     "AI Engineer building production LLM systems: RAG pipelines, RLHF evaluation frameworks, autonomous agents. Shipped voice-driven AI avatar serving 10k+ daily interactions. Full-stack (Next.js, FastAPI, Docker, Vercel/AWS).",
   tagline:
-    "Building intelligent agents, voice-driven experiences, and the infrastructure that trains the models behind them.",
+    "Building low-latency AI agents & RAG systems that run 24/7 in production.",
+  availability: "available" as const,
+  avatar: "/avatar.jpg",
   socials: [
     {
       label: "GitHub",
@@ -72,6 +74,8 @@ export type Project = {
   blurb: string;
   stack: string[];
   accent: "violet" | "cyan" | "white" | "emerald";
+  thumbnail: string;
+  metrics?: { label: string; value: string }[];
   links?: { label: string; href: string }[];
 };
 
@@ -82,6 +86,11 @@ export const projects: Project[] = [
       "Real-time streaming app where a live AI avatar reads chat, responds to comments, and runs a 24/7 radio show. 10k+ daily interactions, <200ms latency.",
     stack: ["Python", "TikTokLive", "TTS", "LLM", "FastAPI", "WebSockets"],
     accent: "violet",
+    thumbnail: "/projects/placeholder-1.jpg",
+    metrics: [
+      { label: "Daily Interactions", value: "10k+" },
+      { label: "Latency", value: "<200ms" },
+    ],
     links: [{ label: "GitHub", href: "https://github.com/cryptboys/ai-avatar" }],
   },
   {
@@ -90,6 +99,11 @@ export const projects: Project[] = [
       "Self-running agent analyzing DLMM liquidity positions on Solana, executing data-driven rebalancing. Hermes orchestration, on-chain execution.",
     stack: ["Python", "Hermes", "Solana", "DLMM", "Docker"],
     accent: "cyan",
+    thumbnail: "/projects/placeholder-2.jpg",
+    metrics: [
+      { label: "Protocol", value: "Solana DLMM" },
+      { label: "Orchestration", value: "Hermes" },
+    ],
     links: [{ label: "GitHub", href: "https://github.com/cryptboys/defi-liquidity-agent" }],
   },
   {
@@ -98,6 +112,11 @@ export const projects: Project[] = [
       "Collection of Kaggle notebooks: cleaning, exploration, feature engineering, model evaluation on real-world datasets. 15+ notebooks, 500+ views.",
     stack: ["Kaggle", "Jupyter", "pandas", "scikit-learn", "XGBoost"],
     accent: "white",
+    thumbnail: "/projects/placeholder-3.jpg",
+    metrics: [
+      { label: "Notebooks", value: "15+" },
+      { label: "Views", value: "500+" },
+    ],
     links: [{ label: "Kaggle", href: "https://kaggle.com/cryptboys" }],
   },
   {
@@ -106,6 +125,11 @@ export const projects: Project[] = [
       "Production RAG system: hybrid search (vector + BM25), multi-tenant auth, usage billing, admin dashboard. Deployed on Vercel + Railway, 99.9% uptime, <500ms p95.",
     stack: ["Next.js", "FastAPI", "LangChain", "Weaviate", "PostgreSQL", "Stripe", "Docker"],
     accent: "emerald",
+    thumbnail: "/projects/placeholder-4.jpg",
+    metrics: [
+      { label: "Uptime", value: "99.9%" },
+      { label: "p95 Latency", value: "<500ms" },
+    ],
     links: [
       { label: "Live Demo", href: "https://herman-rag-saas.vercel.app" },
       { label: "GitHub", href: "https://github.com/cryptboys/rag-saas" },
@@ -117,6 +141,11 @@ export const projects: Project[] = [
       "Exploratory Data Analysis (EDA) on audio data, extracting key metrics like duration, sample rate, RMS energy, Signal-to-Noise Ratio (SNR), and Voice Activity Detection (VAD). Visualizes audio characteristics and quality.",
     stack: ["Python", "Librosa", "Pandas", "Matplotlib", "Seaborn", "Kaggle Notebooks"],
     accent: "cyan",
+    thumbnail: "/projects/placeholder-5.jpg",
+    metrics: [
+      { label: "Notebook", value: "Kaggle" },
+      { label: "Audio Features", value: "EDA" },
+    ],
     links: [
       { label: "Kaggle Notebook", href: "https://www.kaggle.com/code/kangmaswawan/voice-data-exploration-gujarati-spoken-digits" },
       { label: "GitHub Repo", href: "https://github.com/cryptboys/voice-data-project" },

@@ -2,58 +2,142 @@ import Background from "@/components/Background";
 import BentoCard from "@/components/BentoCard";
 import ContactCta from "@/components/ContactCta";
 import ProfileCard from "@/components/ProfileCard";
-import Hero from "@/components/Hero";
+import HeroCard from "@/components/HeroCard";
 import AboutCard from "@/components/AboutCard";
 import ExperienceCard from "@/components/ExperienceCard";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import SkillsCard from "@/components/SkillsCard";
-import ActivityCard from "@/components/ActivityCard";
-import HermesCard from "@/components/HermesCard";
+import StatsCard from "@/components/StatsCard";
+import TechStackCard from "@/components/TechStackCard";
 import Footer from "@/components/Footer";
+import { projects } from "@/data/resume";
 
 export default function Home() {
+  const featuredProjects = projects.slice(0, 2);
+  const otherProjects = projects.slice(2);
+
   return (
-    <main className="relative min-h-screen bg-[#08080A]">
+    <main className="relative min-h-screen bg-[#0A0A0A]">
       <Background />
 
-      <div className="mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-12">
-          {/* Row 1: Hero + Profile */}
-          <BentoCard className="lg:col-span-8">
-            <Hero />
+      <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 auto-rows-[minmax(120px,auto)]">
+          {/* Row 1: Hero (2x) + Profile + Availability */}
+          <BentoCard className="lg:col-span-6 row-span-2">
+            <HeroCard />
           </BentoCard>
-          <BentoCard delay={0.05} className="lg:col-span-4">
+          <BentoCard delay={0.05} className="lg:col-span-3">
             <ProfileCard />
           </BentoCard>
-
-          {/* Row 2: About + Skills + Activity + Hermes */}
           <BentoCard delay={0.1} className="lg:col-span-3">
             <AboutCard />
           </BentoCard>
-          <BentoCard delay={0.15} className="lg:col-span-3">
-            <SkillsCard />
-          </BentoCard>
-          <BentoCard delay={0.2} className="lg:col-span-3">
-            <ActivityCard />
-          </BentoCard>
-          <BentoCard delay={0.25} className="lg:col-span-3">
-            <HermesCard delay={0.25} />
-          </BentoCard>
 
-          {/* Row 3: Experience */}
-          <BentoCard delay={0.25} className="lg:col-span-12">
+          {/* Row 2: Featured projects */}
+          {featuredProjects.map((project, idx) => (
+            <BentoCard
+              key={project.title}
+              delay={0.15 + idx * 0.05}
+              className={idx === 0 ? "lg:col-span-7" : "lg:col-span-5"}
+            >
+              <h3 className="mono-label mb-4">Featured Project</h3>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-lg font-semibold text-white">{project.title}</h4>
+                <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
+                {project.metrics && (
+                  <div className="grid grid-cols-2 gap-2">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2">
+                        <p className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-lg font-bold text-transparent">
+                          {m.value}
+                        </p>
+                        <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+                          {m.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {project.links && (
+                  <div className="flex flex-wrap gap-2">
+                    {project.links.map((l) => (
+                      <a
+                        key={l.label}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/[0.08] transition-colors"
+                      >
+                        {l.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </BentoCard>
+          ))}
+
+          {/* Row 3: Stats + TechStack */}
+          <BentoCard delay={0.25} className="lg:col-span-3">
+            <StatsCard />
+          </BentoCard>
+          <BentoCard delay={0.3} className="lg:col-span-5">
+            <TechStackCard />
+          </BentoCard>
+          <BentoCard delay={0.35} className="lg:col-span-4">
             <ExperienceCard />
           </BentoCard>
-        </div>
 
-        {/* Projects section */}
-        <div className="mt-4 lg:mt-6">
-          <ProjectsGrid />
-        </div>
+          {/* Row 4: Remaining projects */}
+          <BentoCard delay={0.4} className="lg:col-span-12">
+            <p className="mono-label mb-4">More Projects</p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {otherProjects.map((project) => (
+                <div
+                  key={project.title}
+                  className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-5"
+                >
+                  <h4 className="text-sm font-semibold text-white">{project.title}</h4>
+                  <p className="text-xs leading-relaxed text-zinc-400 line-clamp-3">
+                    {project.blurb}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.stack.slice(0, 4).map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-1 text-[10px] text-zinc-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {project.links && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.links.map((l) => (
+                        <a
+                          key={l.label}
+                          href={l.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/[0.08] transition-colors"
+                        >
+                          {l.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </BentoCard>
 
-        {/* Contact CTA */}
-        <div className="mt-4 lg:mt-6">
-          <ContactCta />
+          {/* Row 5: Skills + Contact */}
+          <BentoCard delay={0.45} className="lg:col-span-6">
+            <SkillsCard />
+          </BentoCard>
+          <BentoCard delay={0.5} className="lg:col-span-6">
+            <ContactCta />
+          </BentoCard>
         </div>
 
         <Footer />

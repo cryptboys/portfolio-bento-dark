@@ -9,19 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#08080A",
-        card: "#121214",
-        accent: "#8b5cf6",
-        cyan: "#06b6d4",
+        background: "#0A0A0A", // New background color
+        card: "#121212",      // New card background color
+        border: "rgba(255,255,255,0.08)", // New border color
+        primary: "#FFFFFF",   // Primary text color
+        secondary: "#A1A1AA", // Secondary text color
+        accent: "#C6FF00",    // Accent color
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "ui-monospace", "monospace"],
+        sans: ["var(--font-geist-sans)", "Inter", "system-ui", "sans-serif"], // Geist Sans/Inter
       },
       backgroundImage: {
-        "accent-gradient":
-          "linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%)",
+        "hero-glow": "radial-gradient(ellipse at center, rgba(198, 255, 0, 0.15) 0%, rgba(10, 10, 10, 0) 70%)",
+        "project-gradient": "linear-gradient(to top, #121212 0%, rgba(18,18,18,0) 100%)",
       },
+      gridTemplateColumns: {
+        "12": "repeat(12, minmax(0, 1fr))", // Ensure 12-col grid is available
+      }
     },
   },
   plugins: [],

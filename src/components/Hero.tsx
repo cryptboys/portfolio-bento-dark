@@ -1,60 +1,61 @@
-import { ArrowUpRight, Download, Github, Linkedin, Mail, Send } from "lucide-react";
+import Image from "next/image";
 import { profile } from "@/data/resume";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, Send } from "lucide-react";
 
 export default function Hero() {
   return (
     <div className="flex h-full flex-col justify-between gap-10">
-      <div>
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-          </span>
-          <span className="font-mono text-xs text-emerald-300">
-            Available for new projects
-          </span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            <span className="font-mono text-xs text-emerald-300">
+              Available for new projects
+            </span>
+          </div>
+          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Herman{" "}
+            <span className="text-gradient">Donawan</span>
+          </h1>
+          <p className="mt-4 font-mono text-sm tracking-wide text-violet-300 sm:text-base">
+            &gt; {profile.role}
+          </p>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+            {profile.tagline}
+          </p>
         </div>
-
-        <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-          Herman{" "}
-          <span className="text-gradient">Donawan</span>
-        </h1>
-
-        <p className="mt-4 font-mono text-sm tracking-wide text-violet-300 sm:text-base">
-          &gt; {profile.role}
-        </p>
-
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-          {profile.tagline}
-        </p>
+        <div className="relative h-full min-h-[250px] md:min-h-0 flex items-center justify-center">
+          <Image src="/hero-visual.svg" alt="Abstract AI neural network visualization" width={700} height={600} className="w-full h-full object-contain" priority />
+        </div>
       </div>
-
       <div className="space-y-8">
         <div className="flex flex-wrap items-center gap-3">
           <a
             href="/resume.pdf"
             download
-            className="group inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition-transform duration-300 hover:scale-[1.03]"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent-gradient px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
           >
             <Download className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
             Download CV
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-300 hover:border-violet-400/50 hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors duration-300 hover:border-violet-400/50 hover:bg-white/10 active:scale-[0.98]"
           >
             <Send className="h-4 w-4" />
             Let&apos;s Talk
           </a>
         </div>
-
         <div className="flex items-center gap-4">
           <a
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/60 hover:text-white"
+            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-violet-400/60 hover:text-white active:scale-[0.95]"
           >
             <Github className="h-4 w-4" />
           </a>
@@ -63,14 +64,14 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/60 hover:text-white"
+            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-400/60 hover:text-white active:scale-[0.95]"
           >
             <Linkedin className="h-4 w-4" />
           </a>
           <a
             href={`mailto:${profile.email}`}
             aria-label="Email"
-            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/60 hover:text-white"
+            className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-400/60 hover:text-white active:scale-[0.95]"
           >
             <Mail className="h-4 w-4" />
           </a>
