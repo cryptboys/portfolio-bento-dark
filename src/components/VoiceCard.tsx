@@ -72,10 +72,21 @@ export function VoiceCard() {
 
     // TTS on stop
     if ("speechSynthesis" in window) {
-      const utterance = new SpeechSynthesisUtterance(
-        "Hello from Herman's voice agent"
-      );
+      const utterance = new SpeechSynthesisUtterance("Hello from Herman's voice agent");
       utterance.rate = 1;
+
+      // Try to find a better voice, e.g., a default English female voice
+      const voices = window.speechSynthesis.getVoices();
+      const preferredVoice = voices.find(
+        (voice) => voice.lang === "en-US" && voice.name.includes("Google") && voice.name.includes("Female")
+      ) || voices.find(
+        (voice) => voice.lang === "en-US" && voice.name.includes("Zira")
+      ); // Microsoft Zira is often good
+
+      if (preferredVoice) {
+        utterance.voice = preferredVoice;
+      }
+
       window.speechSynthesis.speak(utterance);
     }
   };
