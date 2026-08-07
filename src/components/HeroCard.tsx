@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Mail, Linkedin, Download } from "lucide-react";
 import { profile } from "@/data/resume";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function HeroCard() {
   const [latency, setLatency] = useState(172);
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduceMotion = useReducedMotion() ?? false;
 
   useEffect(() => {
     if (reduceMotion) return;

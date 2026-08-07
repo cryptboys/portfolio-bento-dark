@@ -59,13 +59,10 @@ export function RagPipeline() {
       {/* Travelling Dot */}
       <motion.div
         className="absolute left-8 top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent"
-        animate={{ x: isReducedMotion ? "0%" : dotX }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear",
+        style={{
+          x: isReducedMotion ? "0%" : dotX,
+          willChange: isReducedMotion ? "auto" : "transform",
         }}
-        style={{ willChange: isReducedMotion ? "auto" : "transform" }}
       />
     </div>
   );
