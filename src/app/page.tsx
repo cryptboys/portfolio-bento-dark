@@ -10,6 +10,9 @@ import SkillsCard from "@/components/SkillsCard";
 import StatsCard from "@/components/StatsCard";
 import TechStackCard from "@/components/TechStackCard";
 import Footer from "@/components/Footer";
+import { MouseSpotlight } from "@/components/MouseSpotlight";
+import { AiAvatarMotion } from "@/components/AiAvatarMotion";
+import { RagPipeline } from "@/components/RagPipeline";
 import { projects } from "@/data/resume";
 
 export default function Home() {
@@ -17,8 +20,9 @@ export default function Home() {
   const otherProjects = projects.slice(2);
 
   return (
-    <main className="relative min-h-screen bg-[#0A0A0A]">
+    <main className="relative min-h-screen bg-background">
       <Background />
+      <MouseSpotlight />
 
       <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 auto-rows-[minmax(120px,auto)]">
@@ -44,7 +48,14 @@ export default function Home() {
                 >
                   <div className="flex flex-col gap-3">
                     <h4 className="text-lg font-semibold text-white">{project.title}</h4>
-                    <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
+                    {idx === 0 ? (
+                      <div className="flex flex-col gap-3">
+                        <AiAvatarMotion />
+                        <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
+                      </div>
+                    ) : (
+                      <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
+                    )}
                     {project.links && (
                       <div className="flex flex-wrap gap-2">
                         {project.links.map((l) => (
@@ -87,9 +98,13 @@ export default function Home() {
                   className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-5"
                 >
                   <h4 className="text-sm font-semibold text-white">{project.title}</h4>
-                  <p className="text-xs leading-relaxed text-zinc-400 line-clamp-3">
-                    {project.blurb}
-                  </p>
+                  {project.title === "RAG SaaS — Multi-tenant Document Q&A" ? (
+                    <RagPipeline />
+                  ) : (
+                    <p className="text-xs leading-relaxed text-zinc-400 line-clamp-3">
+                      {project.blurb}
+                    </p>
+                  )}
                   <div className="flex flex-wrap gap-1.5">
                     {project.stack.slice(0, 4).map((tech) => (
                       <span
