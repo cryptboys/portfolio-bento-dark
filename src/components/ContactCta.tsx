@@ -27,10 +27,10 @@ export default function ContactCta() {
         <div className="max-w-xl">
           <p className="mono-label mb-3">Available for new projects</p>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Let's build something <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">intelligent</span> together.
+            Let&apos;s build something <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">intelligent</span> together.
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-zinc-400 sm:text-base">
-            I'm available for AI engineering, LLM evaluation, voice data, and automation projects. Questions, ideas, or just want to say hi — my inbox is open.
+            I&apos;m available for AI engineering, LLM evaluation, voice data, and automation projects. Questions, ideas, or just want to say hi &mdash; my inbox is open.
           </p>
         </div>
         <div className="flex flex-col gap-3">
