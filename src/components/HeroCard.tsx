@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Mail, Linkedin, Download } from "lucide-react";
 import { profile } from "@/data/resume";
 import { motion } from "framer-motion";
@@ -23,8 +24,14 @@ export default function HeroCard() {
       
       <div className="relative flex items-start gap-6">
         <div className="relative">
-          <div className="h-20 w-20 rounded-full border-2 border-white/10 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 p-1">
-            <div className="h-full w-full rounded-full bg-gradient-to-br from-violet-600 to-cyan-600" />
+          <div className="h-20 w-20 rounded-full border-2 border-white/10 bg-white/5 p-1">
+            <Image
+              src={profile.avatar}
+              alt={profile.name}
+              fill
+              className="rounded-full object-cover"
+              priority
+            />
           </div>
           <div className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white/10 bg-white/5">
             <motion.div
