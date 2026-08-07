@@ -19,7 +19,7 @@
     font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    background-image: url("/noise.webp");
+    background-image: url("/noise.png");
     background-size: 100px;
     background-repeat: repeat;
   }
