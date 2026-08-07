@@ -16,7 +16,7 @@ export default function BentoCard({
 }: BentoCardProps) {
   return (
     <Reveal delay={delay} className={`h-full ${className}`}>
-      <div className="card card-hover h-full overflow-hidden p-6 sm:p-8">
+      <div className="card h-full overflow-hidden p-6 sm:p-8">
         {children}
       </div>
     </Reveal>

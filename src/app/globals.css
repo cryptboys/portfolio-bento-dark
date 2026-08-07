@@ -14,11 +14,14 @@
   }
 
   body {
-    background-color: #08080A;
+    background-color: #080808;
     color: #e5e7eb;
     font-family: var(--font-inter), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    background-image: url("/noise.webp");
+    background-size: 100px;
+    background-repeat: repeat;
   }
 
   ::selection {

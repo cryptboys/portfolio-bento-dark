@@ -14,7 +14,7 @@ export default function ContactCta() {
   };
 
   return (
-    <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm sm:p-12">
+    <div className="group relative overflow-hidden rounded-[24px] border border-[#1E1E1E] bg-[#121212] p-8 backdrop-blur-sm sm:p-12">
       <span
         aria-hidden
         className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-violet-600/20 blur-[120px]"
@@ -34,10 +34,10 @@ export default function ContactCta() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <button
               onClick={copyEmail}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-cyan-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all duration-300 hover:scale-[1.03]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-black shadow-lg shadow-accent/20 transition-all duration-300 hover:scale-[1.03]"
             >
               {copied ? (
                 <>
@@ -56,7 +56,7 @@ export default function ContactCta() {
                 href={profile.calendly}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-violet-400/60 hover:bg-white/[0.08]"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#1E1E1E] bg-[#121212] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-accent hover:text-accent"
               >
                 <ArrowUpRight className="h-4 w-4" />
                 Book 15min Call
@@ -69,7 +69,7 @@ export default function ContactCta() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:border-violet-400/60 hover:text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1E1E1E] bg-[#121212] text-zinc-300 transition-all duration-300 hover:border-accent hover:text-accent"
             >
               <Github className="h-4 w-4" />
             </a>
@@ -78,7 +78,7 @@ export default function ContactCta() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:border-cyan-400/60 hover:text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#1E1E1E] bg-[#121212] text-zinc-300 transition-all duration-300 hover:border-accent hover:text-accent"
             >
               <Linkedin className="h-4 w-4" />
             </a>

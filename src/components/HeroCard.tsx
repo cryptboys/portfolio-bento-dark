@@ -1,26 +1,38 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 import { Mail, Linkedin, Download } from "lucide-react";
 import { profile } from "@/data/resume";
 import { motion } from "framer-motion";
 
 export default function HeroCard() {
-  const statusColor = "bg-green-500";
-  const pulseKeyframes = {
-    "0%": { transform: "scale(0.95)" },
-    "50%": { transform: "scale(1.05)" },
-    "100%": { transform: "scale(0.95)" },
-  };
+  const [latency, setLatency] = useState(172);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const id = setInterval(() => {
+      setLatency(prev => {
+        const delta = (Math.random() - 0.5) * 36;
+        const next = Math.round(prev + delta);
+        return Math.min(208, Math.max(172, next));
+      });
+    }, 2000);
+    return () => clearInterval(id);
+  }, [reduceMotion]);
+
+  const displayLatency = reduceMotion ? 190 : latency;
+  const latencyColor = displayLatency < 180 ? "text-accent" : displayLatency < 200 ? "text-yellow-400" : "text-red-400";
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative col-span-2 row-span-2 flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.08] sm:p-10"
+      className="relative col-span-2 row-span-2 flex flex-col gap-6 rounded-[24px] border border-[#1E1E1E] bg-[#121212] p-8 backdrop-blur-sm sm:p-10"
     >
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-violet-600/10 to-cyan-600/10" />
+      <div className="absolute inset-0 rounded-[24px] bg-gradient-to-br from-accent/10 to-transparent" />
       
       <div className="relative flex items-start gap-6">
         <div className="relative">
@@ -37,7 +49,7 @@ export default function HeroCard() {
             <motion.div
               animate={{ scale: [0.8, 1.2, 0.8] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="h-3 w-3 rounded-full ${statusColor}"
+              className="h-3 w-3 rounded-full bg-accent"
             />
           </div>
         </div>
@@ -50,8 +62,8 @@ export default function HeroCard() {
             {profile.role}
           </p>
           <div className="mt-3 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full ${statusColor}" />
-            <span className="text-xs font-medium text-green-400">
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            <span className="text-xs font-medium text-accent">
               Available for freelance / full-time
             </span>
           </div>
