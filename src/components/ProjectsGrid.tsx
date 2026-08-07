@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowUpRight, FolderGit2, Globe } from "lucide-react";
 import { projects } from "@/data/resume";
 import type { Project } from "@/data/resume";
@@ -33,6 +34,15 @@ export default function ProjectsGrid() {
             <span
               className={`absolute inset-x-0 top-0 h-px bg-gradient-to-r ${bar} via-white/20 to-transparent`}
             />
+            <div className="relative h-32 w-full overflow-hidden rounded-xl sm:h-40">
+              <Image
+                src={project.thumbnail}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            </div>
             <div className="flex items-center justify-between">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-zinc-300">
                 <FolderGit2 className="h-4 w-4" />
