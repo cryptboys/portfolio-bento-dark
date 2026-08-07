@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Mail, Linkedin, Download } from "lucide-react";
 import { profile } from "@/data/resume";
 import { motion, useReducedMotion } from "framer-motion";
+import { MagneticButton } from "@/components/MagneticButton";
 
 export default function HeroCard() {
   const [latency, setLatency] = useState(172);
@@ -74,22 +75,11 @@ export default function HeroCard() {
       </div>
       
       <div className="relative mt-auto flex flex-col gap-3 sm:flex-row">
-        <motion.a
-          whileHover={{ scale: 1.02, y: -2 }}
-          whileTap={{ scale: 0.98 }}
-          href={`mailto:${profile.email}`}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black shadow-lg shadow-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/30"
+        <MagneticButton
+          onClick={() => window.open(`mailto:${profile.email}`, "_self")}
         >
-          <Mail className="h-4 w-4" />
           Email Me
-          <motion.span
-            initial={{ x: 0 }}
-            whileHover={{ x: 3 }}
-            transition={{ duration: 0.2 }}
-          >
-            →
-          </motion.span>
-        </motion.a>
+        </MagneticButton>
         
         <motion.a
           whileHover={{ scale: 1.02, y: -2 }}
