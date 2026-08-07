@@ -160,7 +160,7 @@ export type SkillItem = {
 
 export type SkillGroup = {
   label: string;
-  icon: "code" | "brain" | "mic" | "chain" | "server" | "data";
+  icon: "code" | "brain" | "mic";
   items: SkillItem[];
 };
 
