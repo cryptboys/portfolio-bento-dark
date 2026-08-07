@@ -5,6 +5,7 @@ export const profile = {
   email: "kangmaswawan21@gmail.com",
   github: "https://github.com/cryptboys",
   linkedin: "https://linkedin.com/in/herman-donawan-731554",
+  calendly: "https://calendly.com/placeholder", // ponytail: replace with real Calendly URL
   summary:
     "AI Engineer building production LLM systems: RAG pipelines, RLHF evaluation frameworks, autonomous agents. Shipped voice-driven AI avatar serving 10k+ daily interactions. Full-stack (Next.js, FastAPI, Docker, Vercel/AWS).",
   tagline:
@@ -155,7 +156,6 @@ export const projects: Project[] = [
 
 export type SkillItem = {
   name: string;
-  link?: string;
 };
 
 export type SkillGroup = {
@@ -169,29 +169,29 @@ export const skillGroups: SkillGroup[] = [
     label: "Engineering",
     icon: "code",
     items: [
-      { name: "Python", link: "https://github.com/python" },
-      { name: "TypeScript", link: "https://github.com/microsoft/TypeScript" },
-      { name: "Next.js", link: "https://github.com/vercel/next.js" },
-      { name: "FastAPI", link: "https://github.com/fastapi/fastapi" },
-      { name: "Docker", link: "https://github.com/docker" },
-      { name: "Git/GitHub", link: "https://github.com/git" },
-      { name: "CI/CD (GitHub Actions)", link: "https://github.com/features/actions" },
-      { name: "PostgreSQL", link: "https://github.com/postgres/postgres" },
-      { name: "Redis", link: "https://github.com/redis/redis" },
+      { name: "Python" },
+      { name: "TypeScript" },
+      { name: "Next.js" },
+      { name: "FastAPI" },
+      { name: "Docker" },
+      { name: "Git/GitHub" },
+      { name: "CI/CD (GitHub Actions)" },
+      { name: "PostgreSQL" },
+      { name: "Redis" },
     ],
   },
   {
     label: "AI & LLM",
     icon: "brain",
     items: [
-      { name: "LLM Evaluation (RLHF)", link: "https://github.com/huggingface/trl" },
+      { name: "LLM Evaluation (RLHF)" },
       { name: "Prompt Engineering" },
-      { name: "RAG Pipelines (LangChain, LlamaIndex)", link: "https://github.com/langchain-ai/langchain" },
-      { name: "Vector Databases (Weaviate, Pinecone)", link: "https://github.com/weaviate/weaviate" },
-      { name: "Autonomous Agents (Hermes, CrewAI)", link: "https://github.com/nousresearch/hermes-agent" },
-      { name: "Hermes Agent Framework (Built This Portfolio)", link: "https://hermes-agent.nousresearch.com/" },
-      { name: "Model Fine-tuning (LoRA/QLoRA)", link: "https://github.com/huggingface/peft" },
-      { name: "Model Serving (vLLM, TGI)", link: "https://github.com/vllm-project/vllm" },
+      { name: "RAG Pipelines (LangChain, LlamaIndex)" },
+      { name: "Vector Databases (Weaviate, Pinecone)" },
+      { name: "Autonomous Agents (Hermes, CrewAI)" },
+      { name: "Hermes Agent Framework" },
+      { name: "Model Fine-tuning (LoRA/QLoRA)" },
+      { name: "Model Serving (vLLM, TGI)" },
     ],
   },
   {
@@ -200,39 +200,9 @@ export const skillGroups: SkillGroup[] = [
     items: [
       { name: "Multilingual Voice Actor (EN / ID / JV)" },
       { name: "AI Voice Data Generation" },
-      { name: "TTS Pipeline (Coqui, ElevenLabs, OpenAI)", link: "https://github.com/coqui-ai/TTS" },
-      { name: "ASR (Whisper, Faster-Whisper)", link: "https://github.com/openai/whisper" },
+      { name: "TTS Pipeline (Coqui, ElevenLabs, OpenAI)" },
+      { name: "ASR (Whisper, Faster-Whisper)" },
       { name: "Real-time Voice Streaming" },
-    ],
-  },
-  {
-    label: "Web3 & Data",
-    icon: "chain",
-    items: [
-      { name: "DeFi Protocols", link: "https://github.com/solana-labs/solana" },
-      { name: "Solana Development", link: "https://github.com/solana-developers" },
-      { name: "Smart Contracts (Rust)" },
-      { name: "On-chain Analytics" },
-    ],
-  },
-  {
-    label: "MLOps & Infra",
-    icon: "server",
-    items: [
-      { name: "Kubernetes (basics)", link: "https://github.com/kubernetes/kubernetes" },
-      { name: "Monitoring (Prometheus/Grafana)", link: "https://github.com/prometheus/prometheus" },
-      { name: "CI/CD Pipelines" },
-      { name: "Cloud (Vercel, Railway, AWS)" },
-    ],
-  },
-  {
-    label: "Data Science",
-    icon: "data",
-    items: [
-      { name: "EDA & Feature Engineering" },
-      { name: "XGBoost / LightGBM", link: "https://github.com/dmlc/xgboost" },
-      { name: "Experiment Tracking (MLflow/W&B)", link: "https://github.com/mlflow/mlflow" },
-      { name: "Kaggle Competitions", link: "https://www.kaggle.com" },
     ],
   },
 ];

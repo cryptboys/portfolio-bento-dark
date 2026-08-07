@@ -34,48 +34,37 @@ export default function Home() {
           </BentoCard>
 
           {/* Row 2: Featured projects */}
-          {featuredProjects.map((project, idx) => (
-            <BentoCard
-              key={project.title}
-              delay={0.15 + idx * 0.05}
-              className={idx === 0 ? "lg:col-span-7" : "lg:col-span-5"}
-            >
-              <h3 className="mono-label mb-4">Featured Project</h3>
-              <div className="flex flex-col gap-3">
-                <h4 className="text-lg font-semibold text-white">{project.title}</h4>
-                <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
-                {project.metrics && (
-                  <div className="grid grid-cols-2 gap-2">
-                    {project.metrics.map((m) => (
-                      <div key={m.label} className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2">
-                        <p className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-lg font-bold text-transparent">
-                          {m.value}
-                        </p>
-                        <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
-                          {m.label}
-                        </p>
+          <BentoCard delay={0.15} className="lg:col-span-12">
+            <p className="mono-label mb-4">Featured Projects</p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
+              {featuredProjects.map((project, idx) => (
+                <div
+                  key={project.title}
+                  className={idx === 0 ? "lg:col-span-7" : "lg:col-span-5"}
+                >
+                  <div className="flex flex-col gap-3">
+                    <h4 className="text-lg font-semibold text-white">{project.title}</h4>
+                    <p className="text-sm leading-relaxed text-zinc-400">{project.blurb}</p>
+                    {project.links && (
+                      <div className="flex flex-wrap gap-2">
+                        {project.links.map((l) => (
+                          <a
+                            key={l.label}
+                            href={l.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/[0.08] transition-colors"
+                          >
+                            {l.label}
+                          </a>
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
-                )}
-                {project.links && (
-                  <div className="flex flex-wrap gap-2">
-                    {project.links.map((l) => (
-                      <a
-                        key={l.label}
-                        href={l.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-zinc-300 hover:bg-white/[0.08] transition-colors"
-                      >
-                        {l.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </BentoCard>
-          ))}
+                </div>
+              ))}
+            </div>
+          </BentoCard>
 
           {/* Row 3: Stats + TechStack */}
           <BentoCard delay={0.25} className="lg:col-span-3">

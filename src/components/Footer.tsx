@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="flex flex-col items-center gap-4 pb-10 pt-8 text-center sm:flex-row sm:justify-between sm:text-left">
       <p className="font-mono text-xs text-zinc-500">
-        © {new Date().getFullYear()} {profile.name} · Built with Next.js,
-        Tailwind CSS &amp; Framer Motion
+        © {new Date().getFullYear()} {profile.name} · @cryptboys · Built with
+        Next.js, Tailwind CSS &amp; Framer Motion
       </p>
       <div className="flex items-center gap-3">
         {[

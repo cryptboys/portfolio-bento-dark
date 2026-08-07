@@ -8,7 +8,6 @@ function useWibTime() {
   const [now, setNow] = useState<Date | null>(null);
 
   useEffect(() => {
-    setNow(new Date());
     const id = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(id);
   }, []);
@@ -36,7 +35,7 @@ export default function ProfileCard() {
         </div>
         <div className="min-w-0">
           <p className="truncate font-semibold text-zinc-100">{profile.name}</p>
-          <p className="font-mono text-xs text-zinc-500">@cryptboys</p>
+          <p className="font-mono text-xs text-zinc-500">{profile.role}</p>
         </div>
       </div>
 
@@ -65,7 +64,9 @@ export default function ProfileCard() {
         </li>
         <li className="flex items-center gap-3 text-sm">
           <span className="relative inline-flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            {wib && (
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            )}
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
           </span>
           <span className="flex min-w-0 flex-col">
